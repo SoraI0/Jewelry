@@ -7,6 +7,7 @@ body {
 	font-weight: 300;
 	font-size: 32px;
 	line-height: 38px;
+	margin: 0 auto;
 }
 
 h1 {
@@ -46,4 +47,8 @@ h3 {
 
 .text-white {
 	color: white;
+}
+
+.container {
+	max-width: 1440px;
 }
