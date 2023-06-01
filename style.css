@@ -1,0 +1,49 @@
+:root {
+	--color-blue: #B6D8FF;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 32px;
+	line-height: 38px;
+}
+
+h1 {
+	font-family: 'Brygada 1918', serif;
+	font-weight: 400;
+	font-size: 120px;
+	line-height: 140px;
+}
+
+h2 {
+	font-weight: 600;
+	font-size: 60px;
+	line-height: 72px;
+}
+
+h3 {
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 48px;
+}
+
+.product-name {
+	font-size: 32px;
+	line-height: 38px;
+}
+
+.small-product-name {
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.price {
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+.text-white {
+	color: white;
+}
