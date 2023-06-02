@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +8,74 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Brygada+1918&family=Lato:wght@300;400;700&display=swap"
 		rel="stylesheet">
+		<link rel="stylesheet" href="./style.css">
 	<title>Jewelry</title>
 </head>
-
 <body>
+	<header>
+		<div class="header container">
+			<a href="index.html"><img src="./images/logo.svg" alt="logo"></a>
+			<ul class="header__nav text-white">
+				<li class="header__nav-item">Каталог</li>
+				<li class="header__nav-item">Новинки</li>
+				<li class="header__nav-item">Про нас</li>
+			</ul>
+			<div class="header__icons">
+				<img class="header__icons-busket" src="./images/basket.svg" alt="busket">
+				<img class="header__icons-saved" src="./images/favorites.svg" alt="saved">
+			</div>
+			<img class="header__menu" src="./images/menu.svg.png" alt="menu">
+		</div>
+		<div class="header__info container">
+			<h1 class="text-white">Ювелірні<br>прикраси</h1>
+			<div class="header__info-bottom">
+				<a href="#"><button class="header__info-button button-blue">Замовити</button></a>
+				<p class="header__info-text text-white">Наш ювелірний магазин - це місце, де ви можете знайти найкращі прикраси для себе або для подарунку.</p>
+			</div>
+		</div>
+	</header>
 
+	<section class="about">
+		<div class="about__image"></div>
+		<div class="about__info">
+			<h2>Про нас</h2>
+			<p>Наш ювелірний магазин - це місце, де ви можете знайти найкращі прикраси для себе або для подарунку.<br><br>
+				Ми пропонуємо великий вибір унікальних  і елегантних прикрас, виготовлених з різних матеріалів, таких як золото, срібло, дорогоцінні камені та інші.</p>
+			<a href="#"><button class="about__info-button">Дізнатись більше</button></a>
+		</div>
+	</section>
+
+	<section class="gallery container">
+		<div class="gallery__block gallery__block-top">
+			<div class="gallery__image"><img src="./images/gallery/каблучки.png" alt="jewelry" class="gallery__img"></div>
+			<div class="gallery__overlay">
+				<div class="gallery__text">Каблучки</div>
+			</div>
+		</div>
+		<div class="gallery__block gallery__block-top">
+			<div class="gallery__image"><img src="./images/gallery/набори.png" alt="jewelry" class="gallery__img"></div>
+			<div class="gallery__overlay">
+				<div class="gallery__text">Набори</div>
+			</div>
+		</div>
+		<div class="gallery__block gallery__block-bottom">
+			<div class="gallery__image"><img src="./images/gallery/ланцюжки.png" alt="jewelry" class="gallery__img"></div>
+			<div class="gallery__overlay">
+				<div class="gallery__text">Ланцюжки</div>
+			</div>
+		</div>
+		<div class="gallery__block gallery__block-bottom">
+			<div class="gallery__image"><img src="./images/gallery/браслети.png" alt="jewelry" class="gallery__img"></div>
+			<div class="gallery__overlay">
+				<div class="gallery__text">Браслети</div>
+			</div>
+		</div>
+		<div class="gallery__block gallery__block-bottom">
+			<div class="gallery__image"><img src="./images/gallery/сережки.png" alt="jewelry" class="gallery__img"></div>
+			<div class="gallery__overlay">
+				<div class="gallery__text">Сережки</div>
+			</div>
+		</div>
+	</section>
 </body>
-
 </html>
