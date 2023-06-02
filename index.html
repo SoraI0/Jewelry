@@ -9,11 +9,498 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Brygada+1918&family=Lato:wght@300;400;700&display=swap"
 		rel="stylesheet">
+	<link rel="stylesheet" href="./style.css">
 	<title>Jewelry</title>
 </head>
 
 <body>
+	<!------ Catalog ------------------------------------>
+	<div style="display: none;" class="catalog-img">
+		<div class="container">
+			<img src="./images/catalog-img.png" alt="catalog-img">
+		</div>
+	</div>
 
+	<main style="display: none;" class="main">
+		<div class="container">
+			<div class="main__wrapper">
+				<div class="main__filter filter">
+					<div class="filter__form-button">
+						<h2 class="filter__title text-white">Фільтр</h2>
+						<img src="./images/menu.svg.png" alt="menu">
+					</div>
+					<form class="filter__form" action="">
+						<h2 class="filter__title text-white">Фільтр</h2>
+
+						<div class="filter__group">
+							<h3 class="filter__group-title text-white">Тип вибору</h3>
+
+							<div class="filter__group-list">
+								<div class="filter__group-list-item">
+									<input name="circlets" id="circlets" type="checkbox"
+										class="filter__group-item text-white css-checkbox">
+									<label for="circlets"><span>Каблучки</span></label>
+								</div>
+								<div class="filter__group-list-item">
+									<input name="bracelets" id="bracelets" type="checkbox"
+										class="filter__group-item text-white css-checkbox" checked="">
+									<label for="bracelets"><span>Браслети</span></label>
+								</div>
+								<div class="filter__group-list-item">
+									<input name="earrings" id="earrings" type="checkbox"
+										class="filter__group-item text-white css-checkbox">
+									<label for="earrings"><span>Сережки</span></label>
+								</div>
+								<div class="filter__group-list-item">
+									<input name="chains" id="chains" type="checkbox"
+										class="filter__group-item text-white css-checkbox">
+									<label for="chains"><span>Ланцюжки</span></label>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="filter__group">
+							<h3 class="filter__group-title text-white">Метал</h3>
+
+							<div class="filter__group-list">
+								<div class="filter__group-list-item">
+									<input name="gold" id="gold" type="checkbox"
+										class="filter__group-item text-white css-checkbox">
+									<label for="gold"><span>Золото</span></label>
+								</div>
+								<div class="filter__group-list-item">
+									<input name="silver" id="silver" type="checkbox"
+										class="filter__group-item text-white css-checkbox" checked="">
+									<label for="silver"><span>Срібло</span></label>
+								</div>
+							</div>
+						</div>
+
+						<div class="filter__group">
+							<h3 class="filter__group-title text-white">Проба</h3>
+							<div class="filter__group-list">
+								<div class="filter__group-list-item">
+									<input name="925" id="925" type="checkbox"
+										class="filter__group-item text-white css-checkbox">
+									<label for="925"><span>925</span></label>
+								</div>
+								<div class="filter__group-list-item">
+									<input name="585" id="585" type="checkbox" class="filter__group-item text-white css-checkbox"
+										checked="">
+									<label for="585"><span>585</span></label>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="filter__group">
+							<h3 class="filter__group-title text-white">Ціна</h3>
+							<div class="filter__value text-white">Від <input type="number"></div>
+							<div class="filter__value text-white">До <input type="number"></div>
+						</div>
+
+						<div class="filter__button"><a href="#" class="button-blue">Застосувати</a></div>
+
+					</form>
+				</div>
+
+				<div class="main__products products">
+					<div class="main__products-inner">
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/срібні-сережки-minimal.png" alt="сережки">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Срібні сережки minimal</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/золоті-сережки-minimal.png" alt="сережки">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Золоті сережки circle</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/золоті-сережки-drop.png" alt="сережки">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Золоті сережки drop</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/каблучка-minimal.png" alt="каблучка">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Каблучка minimal </p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/срібні-браслет-minimal.png" alt="браслет">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Срібний браслет minimal </p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/золотий-браслет-перепліт.png" alt="браслет">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Золотий браслет перепліт</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/золотий-ланцюжок-з-діамантами.png" alt="ланцюжок">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Золотий ланцюжок з діамантами</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/золоті-сережки-minimal.png" alt="сережки">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Золоті сережки minimal</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/срібні-сережки-пусети-з-діамантами.png" alt="сережки">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Срібні сережки-пусети з діамантами</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/срібні-сережки-minimal (2).png" alt="сережки">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Срібні сережки minimal</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/золота-підвіска-серце.png" alt="підвіска">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Золота підвіска серце</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/золота-підвіска-стріла-кохання.png" alt="підвіска">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Золота підвіска стріла кохання</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/золотий-браслет-весняний-камінь.png" alt="браслет">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Золотий браслет весняний камінь</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/золота-підвіска-весняний-камінь.png" alt="підвіска">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Золота підвіска весняний камінь</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div class="main__products-product product">
+							<div class="product__img">
+								<img src="./images/catalog/каблучка-з-рожевим-та-голубим-діамантами.png" alt="Каблучка">
+								<div class="product__order">
+									<a href="#" class="product__button button-blue">Замовити</a>
+								</div>
+							</div>
+							<p class="product__name small-product-name">Каблучка з рожевим та голубим діамантами</p>
+							<div class="product__bottom">
+								<div class="product__price price text-white">1299 грн</div>
+								<div class="product__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!------------------------------------------------------>
+
+
+	<section class="slider">
+		<div class="container">
+			<div class="slider__inner">
+				<div class="slider__header">
+					<h2 class="slider__title text-white">Новинки</h2>
+					<a class="slider__button-black button-black text-white" href="#">Переглянути все</a>
+				</div>
+
+				<div class="slider__body">
+					<img class="arrow left-arrow" src="./images/arrow.png" alt="←">
+					<div class="slider__product">
+						<img src="./images/main/золотий-ланцюжок-minimal.png" alt="золотий-ланцюжок-minimal"
+							class="slider__img">
+						<h3 class="slider__product-title text-white">Золотий ланцюжок minimal</h3>
+						<p class="slider__price text-white">10299 грн</p>
+						<div class="slider__product-bottom">
+							<a href="#" class="slider__order button-blue">Замовити</a>
+							<div class="slider__fav">
+								<img src="./images/favorite.svg" alt="favorite">
+							</div>
+						</div>
+					</div>
+
+					<div class="slider__product">
+						<img src="./images/main/сережки-крапельки.png" alt="сережки-крапельки" class="slider__img">
+						<h3 class="slider__product-title text-white">Сережки крапельки</h3>
+						<p class="slider__price text-white">9899 грн</p>
+						<div class="slider__product-bottom">
+							<a href="#" class="slider__order button-blue">Замовити</a>
+							<div class="slider__fav">
+								<img src="./images/favorite.svg" alt="favorite">
+							</div>
+						</div>
+					</div>
+
+					<div class="slider__product">
+						<img src="./images/main/каблучка-класика.png" alt="каблучка-класика" class="slider__img">
+						<h3 class="slider__product-title text-white">Каблучка класика</h3>
+						<p class="slider__price text-white">20599 грн</p>
+						<div class="slider__product-bottom">
+							<a href="#" class="slider__order button-blue">Замовити</a>
+							<div class="slider__fav">
+								<img src="./images/favorite.svg" alt="favorite">
+							</div>
+						</div>
+					</div>
+					<img class="arrow right-arrow" src="./images/arrow.png" alt="→">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="slider">
+		<div class="container">
+			<div class="slider__inner">
+				<div class="slider__header">
+					<h2 class="slider__title text-white">Каблучки</h2>
+					<a class="slider__button-black button-black text-white" href="#">Переглянути все</a>
+				</div>
+
+				<div class="slider__body">
+					<img class="arrow left-arrow" src="./images/arrow.png" alt="←">
+					<div class="slider__product">
+						<img src="./images/main/каблучка-весняне-камiння.png" alt="золотий-ланцюжок-minimal"
+							class="slider__img">
+						<h3 class="slider__product-title text-white">Каблучка весняне каміння</h3>
+						<p class="slider__price text-white">34569 грн</p>
+						<div class="slider__product-bottom">
+							<a href="#" class="slider__order button-blue">Замовити</a>
+							<div class="slider__fav">
+								<img src="./images/favorite.svg" alt="favorite">
+							</div>
+						</div>
+					</div>
+
+					<div class="slider__product">
+						<img src="./images/main/срібна-каблучка-minimal.png" alt="сережки-крапельки" class="slider__img">
+						<h3 class="slider__product-title text-white">Срібна каблучка minimal</h3>
+						<p class="slider__price text-white">96479 грн</p>
+						<div class="slider__product-bottom">
+							<a href="#" class="slider__order button-blue">Замовити</a>
+							<div class="slider__fav">
+								<img src="./images/favorite.svg" alt="favorite">
+							</div>
+						</div>
+					</div>
+
+					<div class="slider__product">
+						<img src="./images/main/золота-каблучка-minimal.png" alt="каблучка-класика" class="slider__img">
+						<h3 class="slider__product-title text-white">Золота каблучка minimal</h3>
+						<p class="slider__price text-white">55289 грн</p>
+						<div class="slider__product-bottom">
+							<a href="#" class="slider__order button-blue">Замовити</a>
+							<div class="slider__fav">
+								<img src="./images/favorite.svg" alt="favorite">
+							</div>
+						</div>
+					</div>
+					<img class="arrow right-arrow" src="./images/arrow.png" alt="→">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="join-us">
+		<div class="join-us__container container">
+			<div class="join-us__inner">
+				<h3 class="join-us__title text-white">Приєднуйся до світу Luxe Jewels </h3>
+				<p class="join-us__descr text-white">Та отримай 10% на першу покупку. Новинки, спеціальні пропозиції,
+					підбірки
+					подарунків,
+					sale будуть приходити тобі на скриню, якщо залишиш її тут!</p>
+				<form class="join-us__form" action="">
+					<input class="join-us__email" name="email" id="email" type="email" placeholder="Email">
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__inner">
+			<div class="footer__img">
+				<img src="./images/footer-img.png" alt="footer-img">
+			</div>
+			<div class="footer__content">
+				<div class="footer__logo-sm">
+					<a href="#" class="footer__logo-img">
+						<img src="./images/logo.svg" alt="Luxe Jewels">
+					</a>
+					<div class="footer__sm">
+						<a href="#"><img src="./images/social-media/facebook.svg" alt="facebook"
+								class="footer__facebook social-media"></a>
+						<a href="#"><img src="./images/social-media/instagram.svg" alt="instagram"
+								class="footer__facebook social-media"></a>
+					</div>
+				</div>
+				<div class="footer__list">
+					<a href="#">Каталог</a>
+					<a href="#">Новинки</a>
+				</div>
+				<div class="footer__list">
+					<a href="#">Про нас</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>
