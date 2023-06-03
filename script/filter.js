@@ -36,6 +36,7 @@ export class Filter {
 				$filterTitle.style.display = 'none'
 				$filter.style.display = 'none'
 				$filter.style.marginTop = '0px'
+				$productsWrapper.style.display = 'flex'
 			}
 		})
 
