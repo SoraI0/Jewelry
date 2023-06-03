@@ -20,16 +20,16 @@
 	</section>
 	<header>
 		<div class="header container">
-			<a href="index.html"><img src="./images/logo.svg" alt="logo"></a>
+			<a class="landing-link" href="#"><img src="./images/logo.svg" alt="logo"></a>
 			<ul class="header__nav text-white">
 				<a>
-					<li class="header__nav-item catalog-menu">Каталог</li>
+					<li class="header__nav-item catalog-link">Каталог</li>
 				</a>
 				<a href="#newness">
-					<li class="header__nav-item">Новинки</li>
+					<li class="header__nav-item landing-link">Новинки</li>
 				</a>
 				<a href="#about">
-					<li class="header__nav-item">Про нас</li>
+					<li class="header__nav-item landing-link">Про нас</li>
 				</a>
 			</ul>
 			<div class="header__icons">
@@ -40,7 +40,7 @@
 			<div class="header__menu">
 				<nav>
 					<ul>
-						<li class="header__menu-item catalog-menu"><a href="#">Каталог</a></li>
+						<li class="header__menu-item catalog-link"><a href="#">Каталог</a></li>
 						<li class="header__menu-item"><a href="#newness">Новинки</a></li>
 						<li class="header__menu-item"><a href="#about">Про нас</a></li>
 					</ul>
@@ -48,7 +48,7 @@
 				</nav>
 			</div>
 		</div>
-		<div class="header__info container">
+		<div class="header__info container landing">
 			<h1 class="text-white">Ювелірні<br>прикраси</h1>
 			<div class="header__info-bottom">
 				<a href="#"><button class="header__info-button button-blue">Замовити</button></a>
@@ -119,10 +119,10 @@
 					<div class="slider__body">
 						<img class="arrow left-arrow" src="./images/arrow.png" alt="←">
 						<div class="slider__product">
-							<img src="./images/main/золотий-ланцюжок-minimal.png" alt="золотий-ланцюжок-minimal"
+							<img src="./images/catalog/золотий-ланцюжок-з-діамантами.png" alt="золотий-ланцюжок-з-діамантами"
 								class="slider__img">
-							<h3 class="slider__product-title text-white">Золотий ланцюжок minimal</h3>
-							<p class="slider__price text-white">10299 грн</p>
+							<h3 class="slider__product-title text-white">Золотий ланцюжок з діамантами</h3>
+							<p class="slider__price text-white">60220 грн</p>
 							<div class="slider__product-bottom">
 								<a href="#" class="slider__order button-blue">Замовити</a>
 								<div class="slider__fav">
@@ -132,8 +132,9 @@
 						</div>
 
 						<div class="slider__product">
-							<img src="./images/main/сережки-крапельки.png" alt="сережки-крапельки" class="slider__img">
-							<h3 class="slider__product-title text-white">Сережки крапельки</h3>
+							<img src="./images/catalog/срібні-сережки-minimal.png" alt="срібні-сережки-minimal"
+								class="slider__img">
+							<h3 class="slider__product-title text-white">Срібні сережки minimal</h3>
 							<p class="slider__price text-white">9899 грн</p>
 							<div class="slider__product-bottom">
 								<a href="#" class="slider__order button-blue">Замовити</a>
@@ -144,45 +145,9 @@
 						</div>
 
 						<div class="slider__product">
-							<img src="./images/main/каблучка-класика.png" alt="каблучка-класика" class="slider__img">
-							<h3 class="slider__product-title text-white">Каблучка класика</h3>
-							<p class="slider__price text-white">20599 грн</p>
-							<div class="slider__product-bottom">
-								<a href="#" class="slider__order button-blue">Замовити</a>
-								<div class="slider__fav">
-									<img src="./images/favorite.svg" alt="favorite">
-								</div>
-							</div>
-						</div>
-
-						<div style="display: none;" class="slider__product">
-							<img src="./images/main/золотий-ланцюжок-minimal.png" alt="золотий-ланцюжок-minimal"
+							<img src="./images/catalog/cрібна-каблучка-square.png" alt="cрібна-каблучка-square"
 								class="slider__img">
-							<h3 class="slider__product-title text-white">Золотий ланцюжок minimal</h3>
-							<p class="slider__price text-white">10299 грн</p>
-							<div class="slider__product-bottom">
-								<a href="#" class="slider__order button-blue">Замовити</a>
-								<div class="slider__fav">
-									<img src="./images/favorite.svg" alt="favorite">
-								</div>
-							</div>
-						</div>
-
-						<div style="display: none;" class="slider__product">
-							<img src="./images/main/сережки-крапельки.png" alt="сережки-крапельки" class="slider__img">
-							<h3 class="slider__product-title text-white">Сережки крапельки</h3>
-							<p class="slider__price text-white">9899 грн</p>
-							<div class="slider__product-bottom">
-								<a href="#" class="slider__order button-blue">Замовити</a>
-								<div class="slider__fav">
-									<img src="./images/favorite.svg" alt="favorite">
-								</div>
-							</div>
-						</div>
-
-						<div style="display: none;" class="slider__product">
-							<img src="./images/main/каблучка-класика.png" alt="каблучка-класика" class="slider__img">
-							<h3 class="slider__product-title text-white">Каблучка класика</h3>
+							<h3 class="slider__product-title text-white">Срібна каблучка square</h3>
 							<p class="slider__price text-white">20599 грн</p>
 							<div class="slider__product-bottom">
 								<a href="#" class="slider__order button-blue">Замовити</a>
@@ -191,6 +156,47 @@
 								</div>
 							</div>
 						</div>
+
+						<div style="display: none;" class="slider__product">
+							<img src="./images/catalog/золота-підвіска-стріла-кохання.png" alt="золота-підвіска-стріла-кохання"
+								class="slider__img">
+							<h3 class="slider__product-title text-white">Золота підвіска стріла кохання</h3>
+							<p class="slider__price text-white">31025 грн</p>
+							<div class="slider__product-bottom">
+								<a href="#" class="slider__order button-blue">Замовити</a>
+								<div class="slider__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div style="display: none;" class="slider__product">
+							<img src="./images/catalog/срібний-набір-з-діамантами.png" alt="срібний-набір-з-діамантами"
+								class="slider__img">
+							<h3 class="slider__product-title text-white">Срібний набір з діамантами</h3>
+							<p class="slider__price text-white">52500 грн</p>
+							<div class="slider__product-bottom">
+								<a href="#" class="slider__order button-blue">Замовити</a>
+								<div class="slider__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div style="display: none;" class="slider__product">
+							<img src="./images/catalog/золотий-браслет-перепліт.png" alt="золотий-браслет-перепліт"
+								class="slider__img">
+							<h3 class="slider__product-title text-white">Золотий браслет перепліт</h3>
+							<p class="slider__price text-white">40500 грн</p>
+							<div class="slider__product-bottom">
+								<a href="#" class="slider__order button-blue">Замовити</a>
+								<div class="slider__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+
 						<img class="arrow right-arrow" src="./images/arrow.png" alt="→">
 					</div>
 				</div>
@@ -208,9 +214,11 @@
 					<div class="slider__body">
 						<img class="arrow left-arrow" src="./images/arrow.png" alt="←">
 						<div class="slider__product">
-							<img src="./images/main/каблучка-весняне-камiння.png" alt="золотий-ланцюжок-minimal"
-								class="slider__img">
-							<h3 class="slider__product-title text-white">Каблучка весняне каміння</h3>
+							<div class="slider__img">
+								<img src="./images/catalog/cрібна-каблучка-square.png" alt="cрібна-каблучка-square"
+									class="slider__img">
+							</div>
+							<h3 class="slider__product-title text-white">Срібна каблучка square</h3>
 							<p class="slider__price text-white">34569 грн</p>
 							<div class="slider__product-bottom">
 								<a href="#" class="slider__order button-blue">Замовити</a>
@@ -221,19 +229,8 @@
 						</div>
 
 						<div class="slider__product">
-							<img src="./images/main/срібна-каблучка-minimal.png" alt="сережки-крапельки" class="slider__img">
-							<h3 class="slider__product-title text-white">Срібна каблучка minimal</h3>
-							<p class="slider__price text-white">96479 грн</p>
-							<div class="slider__product-bottom">
-								<a href="#" class="slider__order button-blue">Замовити</a>
-								<div class="slider__fav">
-									<img src="./images/favorite.svg" alt="favorite">
-								</div>
-							</div>
-						</div>
-
-						<div class="slider__product">
-							<img src="./images/main/золота-каблучка-minimal.png" alt="каблучка-класика" class="slider__img">
+							<img src="./images/catalog/золота-каблучка-minimal.png" alt="золота-каблучка-minimal"
+								class="slider__img">
 							<h3 class="slider__product-title text-white">Золота каблучка minimal</h3>
 							<p class="slider__price text-white">55289 грн</p>
 							<div class="slider__product-bottom">
@@ -243,22 +240,11 @@
 								</div>
 							</div>
 						</div>
-						<div style="display: none;" class="slider__product">
-							<img src="./images/main/каблучка-весняне-камiння.png" alt="золотий-ланцюжок-minimal"
-								class="slider__img">
-							<h3 class="slider__product-title text-white">Каблучка весняне каміння</h3>
-							<p class="slider__price text-white">34569 грн</p>
-							<div class="slider__product-bottom">
-								<a href="#" class="slider__order button-blue">Замовити</a>
-								<div class="slider__fav">
-									<img src="./images/favorite.svg" alt="favorite">
-								</div>
-							</div>
-						</div>
 
-						<div style="display: none;" class="slider__product">
-							<img src="./images/main/срібна-каблучка-minimal.png" alt="сережки-крапельки" class="slider__img">
-							<h3 class="slider__product-title text-white">Срібна каблучка minimal</h3>
+						<div class="slider__product">
+							<img src="./images/catalog/золота-каблучка-з-діамантом.png" alt="золота-каблучка-з-діамантом"
+								class="slider__img">
+							<h3 class="slider__product-title text-white">Золота каблучка з діамантом</h3>
 							<p class="slider__price text-white">96479 грн</p>
 							<div class="slider__product-bottom">
 								<a href="#" class="slider__order button-blue">Замовити</a>
@@ -269,8 +255,34 @@
 						</div>
 
 						<div style="display: none;" class="slider__product">
-							<img src="./images/main/золота-каблучка-minimal.png" alt="каблучка-класика" class="slider__img">
-							<h3 class="slider__product-title text-white">Золота каблучка minimal</h3>
+							<img src="./images/catalog/каблучка-minimal.png" alt="каблучка-minimal" class="slider__img">
+							<h3 class="slider__product-title text-white">Каблучка minimal</h3>
+							<p class="slider__price text-white">34569 грн</p>
+							<div class="slider__product-bottom">
+								<a href="#" class="slider__order button-blue">Замовити</a>
+								<div class="slider__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div style="display: none;" class="slider__product">
+							<img src="./images/catalog/каблучка-з-рожевим-та-голубим-діамантами.png"
+								alt="каблучка-з-рожевим-та-блакитним-діамантами" class="slider__img">
+							<h3 class="slider__product-title text-white">Каблучка з рожевим та блакитним діамантами</h3>
+							<p class="slider__price text-white">96479 грн</p>
+							<div class="slider__product-bottom">
+								<a href="#" class="slider__order button-blue">Замовити</a>
+								<div class="slider__fav">
+									<img src="./images/favorite.svg" alt="favorite">
+								</div>
+							</div>
+						</div>
+
+						<div style="display: none;" class="slider__product">
+							<img src="./images/catalog/срібна-каблучка-minimal.png" alt="срібна-каблучка-minimal"
+								class="slider__img">
+							<h3 class="slider__product-title text-white">Срібна каблучка minimal</h3>
 							<p class="slider__price text-white">55289 грн</p>
 							<div class="slider__product-bottom">
 								<a href="#" class="slider__order button-blue">Замовити</a>
@@ -661,11 +673,11 @@
 					</div>
 				</div>
 				<div class="footer__list">
-					<a class="catalog-menu" href="#">Каталог</a>
-					<a href="#newness">Новинки</a>
+					<a class="catalog-link" href="#">Каталог</a>
+					<a class="landing-link" href="#newness">Новинки</a>
 				</div>
 				<div class="footer__list">
-					<a href="#about">Про нас</a>
+					<a class="landing-link" href="#about">Про нас</a>
 				</div>
 			</div>
 		</div>

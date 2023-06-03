@@ -30,14 +30,14 @@ export class Slider {
 			if (screenWidth >= 920) {
 				right.addEventListener('click', () => {
 					if (slide === sliderItems.length - 2) {
-						slide = 1;
+						slide = 0;
 					}
-
 					slide++;
 
 					sliderItems.forEach(item => {
 						item.style.display = 'none'
 					})
+
 					sliderItems[slide - 1].style.display = 'flex'
 					sliderItems[slide].style.display = 'flex'
 					sliderItems[slide + 1].style.display = 'flex'
@@ -47,7 +47,7 @@ export class Slider {
 				left.addEventListener('click', () => {
 					slide--;
 					if (slide <= 0) {
-						slide = sliderItems.length - 3;
+						slide = sliderItems.length - 2;
 					}
 
 					sliderItems.forEach(item => {
@@ -60,8 +60,8 @@ export class Slider {
 			} else if (screenWidth > 680 && screenWidth < 920) {
 				right.addEventListener('click', () => {
 
-					if (slide === sliderItems.length - 2) {
-						slide = 1;
+					if (slide === sliderItems.length - 1) {
+						slide = 0;
 					}
 					slide++;
 
@@ -75,7 +75,7 @@ export class Slider {
 				left.addEventListener('click', () => {
 					slide--;
 					if (slide <= 0) {
-						slide = sliderItems.length - 3;
+						slide = sliderItems.length - 1;
 					}
 
 					sliderItems.forEach(item => {
@@ -87,8 +87,8 @@ export class Slider {
 			} else if (screenWidth <= 680) {
 				right.addEventListener('click', () => {
 
-					if (slide === sliderItems.length - 2) {
-						slide = 1;
+					if (slide === sliderItems.length - 1) {
+						slide = 0;
 					}
 					slide++;
 
@@ -101,7 +101,7 @@ export class Slider {
 				left.addEventListener('click', () => {
 					slide--;
 					if (slide <= 0) {
-						slide = sliderItems.length - 3;
+						slide = sliderItems.length - 1;
 					}
 
 					sliderItems.forEach(item => {
