@@ -6,5 +6,7 @@ import { Favorites } from './favorites.js';
 new Menu()
 new Slider()
 new Favorites ()
+new PageTransition()
+
 
 
