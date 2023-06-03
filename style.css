@@ -107,21 +107,6 @@ ul {
 	margin: 0 auto;
 }
 
-.button-blue {
-	background-color: var(--color-blue);
-	padding: 10px 36px;
-	font-size: 21.2626px;
-	line-height: 120%;
-	transition: 0.3s;
-	border: 1px solid rgba(255, 255, 255, 0);
-}
-
-.button-blue:hover {
-	background-color: #ffffff00;
-	border: 1px solid white;
-	color: white;
-}
-
 .button-black {
 	background-color: transparent;
 	padding: 15px 30px;

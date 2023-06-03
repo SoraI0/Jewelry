@@ -329,10 +329,10 @@
 							<h2 class="filter__title text-white">Фільтр</h2>
 							<img src="./images/menu.svg.png" alt="menu">
 						</div>
-						<form class="filter__form" action="">
+						<form id="filter" class="filter__form" action="">
 							<h2 class="filter__title text-white">Фільтр</h2>
 
-							<div class="filter__group">
+							<div id="type" class="filter__group">
 								<h3 class="filter__group-title text-white">Тип вибору</h3>
 
 								<div class="filter__group-list">
@@ -361,7 +361,7 @@
 
 
 
-							<div class="filter__group">
+							<div id="material" class="filter__group">
 								<h3 class="filter__group-title text-white">Метал</h3>
 
 								<div class="filter__group-list">
@@ -378,27 +378,27 @@
 								</div>
 							</div>
 
-							<div class="filter__group">
+							<div id="test" class="filter__group">
 								<h3 class="filter__group-title text-white">Проба</h3>
 								<div class="filter__group-list">
 									<div class="filter__group-list-item">
-										<input name="925" id="925" type="checkbox"
+										<input name="test-925" id="test-925" type="checkbox"
 											class="filter__group-item text-white css-checkbox">
-										<label for="925"><span>925</span></label>
+										<label for="test-925"><span>925</span></label>
 									</div>
 									<div class="filter__group-list-item">
-										<input name="585" id="585" type="checkbox"
+										<input name="test-585" id="test-585" type="checkbox"
 											class="filter__group-item text-white css-checkbox" checked="">
-										<label for="585"><span>585</span></label>
+										<label for="test-585"><span>585</span></label>
 									</div>
 								</div>
 
 							</div>
 
-							<div class="filter__group">
+							<div id="price" class="filter__group">
 								<h3 class="filter__group-title text-white">Ціна</h3>
-								<div class="filter__value text-white">Від <input type="number"></div>
-								<div class="filter__value text-white">До <input type="number"></div>
+								<div class="filter__value text-white">Від <input id="price-from" type="number"></div>
+								<div class="filter__value text-white">До <input id="price-to" type="number"></div>
 							</div>
 
 							<div class="filter__button"><a href="#" class="button-blue">Застосувати</a></div>
@@ -408,7 +408,8 @@
 
 					<div class="main__products products">
 						<div class="main__products-inner">
-							<div class="main__products-product product">
+							<div data-type="earrings" data-material="silver" data-test="925" data-price="10320"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/срібні-сережки-minimal.png" alt="сережки">
 									<div class="product__order">
@@ -417,14 +418,15 @@
 								</div>
 								<p class="product__name small-product-name">Срібні сережки minimal</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">10320 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="earrings" data-material="gold" data-test="585" data-price="35600"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золоті-сережки-minimal.png" alt="сережки">
 									<div class="product__order">
@@ -433,14 +435,15 @@
 								</div>
 								<p class="product__name small-product-name">Золоті сережки circle</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">35600 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="earrings" data-material="gold" data-test="585" data-price="29660"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золоті-сережки-drop.png" alt="сережки">
 									<div class="product__order">
@@ -449,14 +452,15 @@
 								</div>
 								<p class="product__name small-product-name">Золоті сережки drop</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">29660 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="circlets" data-material="silver" data-test="925" data-price="25000"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/каблучка-minimal.png" alt="каблучка">
 									<div class="product__order">
@@ -465,14 +469,15 @@
 								</div>
 								<p class="product__name small-product-name">Каблучка minimal </p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">25000 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="bracelets" data-material="silver" data-test="585" data-price="13250"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/срібні-браслет-minimal.png" alt="браслет">
 									<div class="product__order">
@@ -481,14 +486,15 @@
 								</div>
 								<p class="product__name small-product-name">Срібний браслет minimal </p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">13250 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="bracelets" data-material="gold" data-test="585" data-price="23650"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золотий-браслет-перепліт.png" alt="браслет">
 									<div class="product__order">
@@ -497,14 +503,15 @@
 								</div>
 								<p class="product__name small-product-name">Золотий браслет перепліт</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">23650 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="chains" data-material="gold" data-test="585" data-price="30500"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золотий-ланцюжок-з-діамантами.png" alt="ланцюжок">
 									<div class="product__order">
@@ -513,14 +520,15 @@
 								</div>
 								<p class="product__name small-product-name">Золотий ланцюжок з діамантами</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">30500 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="earrings" data-material="gold" data-test="585" data-price="9000"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золоті-сережки-minimal.png" alt="сережки">
 									<div class="product__order">
@@ -529,14 +537,15 @@
 								</div>
 								<p class="product__name small-product-name">Золоті сережки minimal</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">9000 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="earrings" data-material="silver" data-test="925" data-price="56500"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/срібні-сережки-пусети-з-діамантами.png" alt="сережки">
 									<div class="product__order">
@@ -545,14 +554,15 @@
 								</div>
 								<p class="product__name small-product-name">Срібні сережки-пусети з діамантами</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">56500 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="earrings" data-material="silver" data-test="585" data-price="8500"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/срібні-сережки-minimal (2).png" alt="сережки">
 									<div class="product__order">
@@ -561,14 +571,15 @@
 								</div>
 								<p class="product__name small-product-name">Срібні сережки minimal</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">8500 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="chains" data-material="gold" data-test="585" data-price="16600"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золота-підвіска-серце.png" alt="підвіска">
 									<div class="product__order">
@@ -577,14 +588,15 @@
 								</div>
 								<p class="product__name small-product-name">Золота підвіска серце</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">16600 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="chains" data-material="gold" data-test="585" data-price="15200"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золота-підвіска-стріла-кохання.png" alt="підвіска">
 									<div class="product__order">
@@ -593,14 +605,15 @@
 								</div>
 								<p class="product__name small-product-name">Золота підвіска стріла кохання</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">15200 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="bracelets" data-material="gold" data-test="585" data-price="9750"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золотий-браслет-весняний-камінь.png" alt="браслет">
 									<div class="product__order">
@@ -609,14 +622,15 @@
 								</div>
 								<p class="product__name small-product-name">Золотий браслет весняний камінь</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">9750 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="chains" data-material="gold" data-test="585" data-price="13900"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золота-підвіска-весняний-камінь.png" alt="підвіска">
 									<div class="product__order">
@@ -625,14 +639,15 @@
 								</div>
 								<p class="product__name small-product-name">Золота підвіска весняний камінь</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">13900 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
 								</div>
 							</div>
 
-							<div class="main__products-product product">
+							<div data-type="circlets" data-material="silver" data-test="925" data-price="76200"
+								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/каблучка-з-рожевим-та-голубим-діамантами.png" alt="Каблучка">
 									<div class="product__order">
@@ -641,7 +656,7 @@
 								</div>
 								<p class="product__name small-product-name">Каблучка з рожевим та голубим діамантами</p>
 								<div class="product__bottom">
-									<div class="product__price price text-white">1299 грн</div>
+									<div class="product__price price text-white">76200 грн</div>
 									<div class="product__fav">
 										<img src="./images/favorite.svg" alt="favorite">
 									</div>
