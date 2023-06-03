@@ -15,7 +15,7 @@
 
 <body>
 	<section class="scroll-to-top">
-		<div><a class="scroll-to-top__a" href="#top"><img class="scroll-to-top__img" src="/images/arrow_up.svg.png"
+		<div><a class="scroll-to-top__a" href="#top"><img class="scroll-to-top__img" src="./images/arrow_up.svg.png"
 					alt=""></a></div>
 	</section>
 	<header>
@@ -25,10 +25,10 @@
 				<a>
 					<li class="header__nav-item">Каталог</li>
 				</a>
-				<a>
+				<a href="#newness">
 					<li class="header__nav-item">Новинки</li>
 				</a>
-				<a>
+				<a href="#about">
 					<li class="header__nav-item">Про нас</li>
 				</a>
 			</ul>
@@ -36,7 +36,17 @@
 				<img class="header__icons-busket" src="./images/basket.svg" alt="busket">
 				<img class="header__icons-saved" src="./images/favorites.svg" alt="saved">
 			</div>
-			<img class="header__menu" src="./images/menu.svg.png" alt="menu">
+			<img class="header__menu-img" src="./images/menu.svg.png" alt="menu">
+			<div class="header__menu">
+				<nav>
+					<ul>
+						<li class="header__menu-item"><a href="#">Каталог</a></li>
+						<li class="header__menu-item"><a href="#newness">Новинки</a></li>
+						<li class="header__menu-item"><a href="#about">Про нас</a></li>
+					</ul>
+					<img class="header__menu-img-cross" src="./images/x_close_cross.png" alt="menu">
+				</nav>
+			</div>
 		</div>
 		<div class="header__info container">
 			<h1 class="text-white">Ювелірні<br>прикраси</h1>
@@ -48,7 +58,8 @@
 		</div>
 	</header>
 
-	<section class="about">
+	<script src="./script/index.js" type="module"></script>
+	<section class="about" id="about">
 		<div class="about__image"></div>
 		<div class="about__info">
 			<h2>Про нас</h2>
@@ -92,7 +103,7 @@
 		</div>
 	</section>
 
-	<section class="slider">
+	<section class="slider" id="newness">
 		<div class="container">
 			<div class="slider__inner">
 				<div class="slider__header">
@@ -570,15 +581,14 @@
 				</div>
 				<div class="footer__list">
 					<a href="#">Каталог</a>
-					<a href="#">Новинки</a>
+					<a href="#newness">Новинки</a>
 				</div>
 				<div class="footer__list">
-					<a href="#">Про нас</a>
+					<a href="#about">Про нас</a>
 				</div>
 			</div>
 		</div>
 	</footer>
-
 
 </body>
 
