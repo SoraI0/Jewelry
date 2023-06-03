@@ -3,7 +3,7 @@ export class PageTransition {
 		const $catalogLink = document.querySelectorAll('.catalog-link')
 		const $landingLink = document.querySelectorAll('.landing-link')
 		const $catalog = document.querySelectorAll('#catalog')
-		const $landing = document.querySelectorAll('.landing')
+		const $landing = document.querySelectorAll('.landing, .header__info')
 		const $header = document.querySelector('header')
 
 
