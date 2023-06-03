@@ -351,7 +351,7 @@
 				<div class="main__wrapper">
 					<div class="main__filter filter">
 						<div class="filter__form-button">
-							<h2 class="filter__title text-white">Фільтр</h2>
+							<h2 class="filter__button-text text-white">Фільтр</h2>
 							<img src="./images/menu.svg.png" alt="menu">
 						</div>
 						<form id="filter" class="filter__form" action="">
@@ -359,7 +359,6 @@
 
 							<div id="type" class="filter__group">
 								<h3 class="filter__group-title text-white">Тип вибору</h3>
-
 								<div class="filter__group-list">
 									<div class="filter__group-list-item">
 										<input name="circlets" id="circlets" type="checkbox"
@@ -368,7 +367,7 @@
 									</div>
 									<div class="filter__group-list-item">
 										<input name="bracelets" id="bracelets" type="checkbox"
-											class="filter__group-item text-white css-checkbox" checked="">
+											class="filter__group-item text-white css-checkbox">
 										<label for="bracelets"><span>Браслети</span></label>
 									</div>
 									<div class="filter__group-list-item">
@@ -384,11 +383,8 @@
 								</div>
 							</div>
 
-
-
 							<div id="material" class="filter__group">
 								<h3 class="filter__group-title text-white">Метал</h3>
-
 								<div class="filter__group-list">
 									<div class="filter__group-list-item">
 										<input name="gold" id="gold" type="checkbox"
@@ -397,7 +393,7 @@
 									</div>
 									<div class="filter__group-list-item">
 										<input name="silver" id="silver" type="checkbox"
-											class="filter__group-item text-white css-checkbox" checked="">
+											class="filter__group-item text-white css-checkbox">
 										<label for="silver"><span>Срібло</span></label>
 									</div>
 								</div>
@@ -413,27 +409,31 @@
 									</div>
 									<div class="filter__group-list-item">
 										<input name="test-585" id="test-585" type="checkbox"
-											class="filter__group-item text-white css-checkbox" checked="">
+											class="filter__group-item text-white css-checkbox">
 										<label for="test-585"><span>585</span></label>
 									</div>
 								</div>
-
 							</div>
 
 							<div id="price" class="filter__group">
 								<h3 class="filter__group-title text-white">Ціна</h3>
-								<div class="filter__value text-white">Від <input id="price-from" type="number"></div>
-								<div class="filter__value text-white">До <input id="price-to" type="number"></div>
+								<div class="filter__value text-white">Від <input id="price-from" type="number"
+										name="price-from"></div>
+								<div class="filter__value text-white">До <input id="price-to" type="number" name="price-to">
+								</div>
 							</div>
-
-							<div class="filter__button"><a href="#" class="button-blue">Застосувати</a></div>
+							<input type="submit" class="filter__button button-blue" value="Застосувати">
 
 						</form>
 					</div>
 
+
+					<div class="hide main__not-a-found text-white">
+						<p>Нічого не знайдено</p>
+					</div>
 					<div class="main__products products">
 						<div class="main__products-inner">
-							<div data-type="earrings" data-material="silver" data-test="925" data-price="10320"
+							<div data-type="earrings" data-material="silver" data-test="test-925" data-price="10320"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/срібні-сережки-minimal.png" alt="сережки">
@@ -450,7 +450,7 @@
 								</div>
 							</div>
 
-							<div data-type="earrings" data-material="gold" data-test="585" data-price="35600"
+							<div data-type="earrings" data-material="gold" data-test="test-585" data-price="35600"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золоті-сережки-minimal.png" alt="сережки">
@@ -467,7 +467,7 @@
 								</div>
 							</div>
 
-							<div data-type="earrings" data-material="gold" data-test="585" data-price="29660"
+							<div data-type="earrings" data-material="gold" data-test="test-585" data-price="29660"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золоті-сережки-drop.png" alt="сережки">
@@ -484,7 +484,7 @@
 								</div>
 							</div>
 
-							<div data-type="circlets" data-material="silver" data-test="925" data-price="25000"
+							<div data-type="circlets" data-material="silver" data-test="test-925" data-price="25000"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/каблучка-minimal.png" alt="каблучка">
@@ -501,7 +501,7 @@
 								</div>
 							</div>
 
-							<div data-type="bracelets" data-material="silver" data-test="585" data-price="13250"
+							<div data-type="bracelets" data-material="silver" data-test="test-585" data-price="13250"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/срібні-браслет-minimal.png" alt="браслет">
@@ -518,7 +518,7 @@
 								</div>
 							</div>
 
-							<div data-type="bracelets" data-material="gold" data-test="585" data-price="23650"
+							<div data-type="bracelets" data-material="gold" data-test="test-585" data-price="23650"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золотий-браслет-перепліт.png" alt="браслет">
@@ -535,7 +535,7 @@
 								</div>
 							</div>
 
-							<div data-type="chains" data-material="gold" data-test="585" data-price="30500"
+							<div data-type="chains" data-material="gold" data-test="test-585" data-price="30500"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золотий-ланцюжок-з-діамантами.png" alt="ланцюжок">
@@ -552,7 +552,7 @@
 								</div>
 							</div>
 
-							<div data-type="earrings" data-material="gold" data-test="585" data-price="9000"
+							<div data-type="earrings" data-material="gold" data-test="test-585" data-price="9000"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золоті-сережки-minimal.png" alt="сережки">
@@ -569,7 +569,7 @@
 								</div>
 							</div>
 
-							<div data-type="earrings" data-material="silver" data-test="925" data-price="56500"
+							<div data-type="earrings" data-material="silver" data-test="test-925" data-price="56500"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/срібні-сережки-пусети-з-діамантами.png" alt="сережки">
@@ -586,7 +586,7 @@
 								</div>
 							</div>
 
-							<div data-type="earrings" data-material="silver" data-test="585" data-price="8500"
+							<div data-type="earrings" data-material="silver" data-test="test-585" data-price="8500"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/срібні-сережки-minimal (2).png" alt="сережки">
@@ -603,7 +603,7 @@
 								</div>
 							</div>
 
-							<div data-type="chains" data-material="gold" data-test="585" data-price="16600"
+							<div data-type="chains" data-material="gold" data-test="test-585" data-price="16600"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золота-підвіска-серце.png" alt="підвіска">
@@ -620,7 +620,7 @@
 								</div>
 							</div>
 
-							<div data-type="chains" data-material="gold" data-test="585" data-price="15200"
+							<div data-type="chains" data-material="gold" data-test="test-585" data-price="15200"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золота-підвіска-стріла-кохання.png" alt="підвіска">
@@ -637,7 +637,7 @@
 								</div>
 							</div>
 
-							<div data-type="bracelets" data-material="gold" data-test="585" data-price="9750"
+							<div data-type="bracelets" data-material="gold" data-test="test-585" data-price="9750"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золотий-браслет-весняний-камінь.png" alt="браслет">
@@ -654,7 +654,7 @@
 								</div>
 							</div>
 
-							<div data-type="chains" data-material="gold" data-test="585" data-price="13900"
+							<div data-type="chains" data-material="gold" data-test="test-585" data-price="13900"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/золота-підвіска-весняний-камінь.png" alt="підвіска">
@@ -671,7 +671,7 @@
 								</div>
 							</div>
 
-							<div data-type="circlets" data-material="silver" data-test="925" data-price="76200"
+							<div data-type="circlets" data-material="silver" data-test="test-925" data-price="76200"
 								class="main__products-product product">
 								<div class="product__img">
 									<img src="./images/catalog/каблучка-з-рожевим-та-голубим-діамантами.png" alt="Каблучка">

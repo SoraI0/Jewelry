@@ -1,119 +1,41 @@
 export class Slider {
-	constructor() {
-		const leftArrowNewness = document.querySelector('#newness .left-arrow')
-		const rightArrowNewness = document.querySelector('#newness .right-arrow')
+	constructor(sliderID) {
+		 this.leftArrow = document.querySelector(`${sliderID} .left-arrow`)
+		 this.rightArrow = document.querySelector(`${sliderID} .right-arrow`)
+		 this.items = document.querySelectorAll(`${sliderID} .slider__product`)
 
-		const leftArrowRings = document.querySelector('#rings .left-arrow')
-		const rightArrowRings = document.querySelector('#rings .right-arrow')
+		 this.index = 1;
 
-		const newness = document.querySelectorAll('#newness .slider__product')
-		const rings = document.querySelectorAll('#rings .slider__product')
+		 this.rightArrow.addEventListener('click', () => {
+			  if (this.index === this.items.length - 2) {
+					this.index = 0;
+			  }
+			  this.index++;
+			  this.updateSlider()
+		 })
 
-		let screenWidth = screen.width;
+		 this.leftArrow.addEventListener('click', () => {
+			  this.index--;
+			  if (this.index <= 0) {
+					this.index = this.items.length - 2;
+			  }
+			  this.updateSlider()
+		 })
 
-		let slideNewness = 1;
-		let slideRings = 1;
-
-		slideSlider(slideNewness, newness, leftArrowNewness, rightArrowNewness)
-		slideSlider(slideRings, rings, leftArrowRings, rightArrowRings)
-
-
-		function slideSlider(slide, sliderItems, left, right) {
-
-			if (screenWidth <= 680) {
-				sliderItems[slide + 1].style.display = 'none'
-				sliderItems[slide - 1].style.display = 'none'
-			}
-			if (screenWidth <= 920) {
-				sliderItems[slide + 1].style.display = 'none'
-			}
-			if (screenWidth >= 920) {
-				right.addEventListener('click', () => {
-					if (slide === sliderItems.length - 2) {
-						slide = 0;
-					}
-					slide++;
-
-					sliderItems.forEach(item => {
-						item.style.display = 'none'
-					})
-
-					sliderItems[slide - 1].style.display = 'flex'
-					sliderItems[slide].style.display = 'flex'
-					sliderItems[slide + 1].style.display = 'flex'
-
-				})
-
-				left.addEventListener('click', () => {
-					slide--;
-					if (slide <= 0) {
-						slide = sliderItems.length - 2;
-					}
-
-					sliderItems.forEach(item => {
-						item.style.display = 'none'
-					})
-					sliderItems[slide - 1].style.display = 'flex'
-					sliderItems[slide].style.display = 'flex'
-					sliderItems[slide + 1].style.display = 'flex'
-				})
-			} else if (screenWidth > 680 && screenWidth < 920) {
-				right.addEventListener('click', () => {
-
-					if (slide === sliderItems.length - 1) {
-						slide = 0;
-					}
-					slide++;
-
-					sliderItems.forEach(item => {
-						item.style.display = 'none'
-					})
-					sliderItems[slide - 1].style.display = 'flex'
-					sliderItems[slide].style.display = 'flex'
-				})
-
-				left.addEventListener('click', () => {
-					slide--;
-					if (slide <= 0) {
-						slide = sliderItems.length - 1;
-					}
-
-					sliderItems.forEach(item => {
-						item.style.display = 'none'
-					})
-					sliderItems[slide - 1].style.display = 'flex'
-					sliderItems[slide].style.display = 'flex'
-				})
-			} else if (screenWidth <= 680) {
-				right.addEventListener('click', () => {
-
-					if (slide === sliderItems.length - 1) {
-						slide = 0;
-					}
-					slide++;
-
-					sliderItems.forEach(item => {
-						item.style.display = 'none'
-					})
-					sliderItems[slide].style.display = 'flex'
-				})
-
-				left.addEventListener('click', () => {
-					slide--;
-					if (slide <= 0) {
-						slide = sliderItems.length - 1;
-					}
-
-					sliderItems.forEach(item => {
-						item.style.display = 'none'
-					})
-					sliderItems[slide].style.display = 'flex'
-				})
-			}
-
-		}
-		
+		 window.addEventListener('resize', () => this.updateSlider())
+		 
 	}
 
+	updateSlider(){
+		 this.items.forEach(item => {
+			  item.style.display = 'none'
+		 })
+		 this.items[this.index].style.display = 'flex'
+		 if (screen.width > 680) {
+			  this.items[this.index - 1].style.display = 'flex'
+		 }
+		 if (screen.width > 920) {
+			  this.items[this.index + 1].style.display = 'flex'
+		 }
+	}
 }
-
