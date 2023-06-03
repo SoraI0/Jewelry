@@ -4,5 +4,6 @@ import { PageTransition } from "./page-transition.js"
 
 new Menu()
 new Slider()
+new PageTransition()
 
 

@@ -23,7 +23,7 @@
 			<a href="index.html"><img src="./images/logo.svg" alt="logo"></a>
 			<ul class="header__nav text-white">
 				<a>
-					<li class="header__nav-item">Каталог</li>
+					<li class="header__nav-item catalog-menu">Каталог</li>
 				</a>
 				<a href="#newness">
 					<li class="header__nav-item">Новинки</li>
@@ -40,7 +40,7 @@
 			<div class="header__menu">
 				<nav>
 					<ul>
-						<li class="header__menu-item"><a href="#">Каталог</a></li>
+						<li class="header__menu-item catalog-menu"><a href="#">Каталог</a></li>
 						<li class="header__menu-item"><a href="#newness">Новинки</a></li>
 						<li class="header__menu-item"><a href="#about">Про нас</a></li>
 					</ul>
@@ -58,7 +58,7 @@
 		</div>
 	</header>
 
-	<div class="landing">
+	<div id="landing" class="landing">
 		<section class="about" id="about">
 			<div class="about__image"></div>
 			<div class="about__info">
@@ -302,7 +302,7 @@
 
 	</div>
 	<!------ Catalog ------------------------------------>
-	<div style="display: none;" class="catalog">
+	<div style="display: none;" id="catalog" class="catalog">
 		<div class="catalog-img">
 			<div class="container">
 				<img src="./images/catalog-img.png" alt="catalog-img">
@@ -661,7 +661,7 @@
 					</div>
 				</div>
 				<div class="footer__list">
-					<a href="#">Каталог</a>
+					<a class="catalog-menu" href="#">Каталог</a>
 					<a href="#newness">Новинки</a>
 				</div>
 				<div class="footer__list">
