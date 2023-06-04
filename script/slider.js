@@ -5,7 +5,7 @@ export class Slider {
 		this.items = document.querySelectorAll(`${sliderID} .slider__product`)
 
 		this.index = 1;
-
+		this.updateSlider()
 		this.rightArrow.addEventListener('click', () => {
 			if (this.index === this.items.length - 2) {
 				this.index = 0;

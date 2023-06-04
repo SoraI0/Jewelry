@@ -7,7 +7,6 @@ export class PageTransition {
 		const $header = document.querySelector('header')
 		const $typeCheckbox = document.querySelectorAll('#type input')
 		const $submitButton = document.querySelector('.filter__button')
-		const $mainWrapper = document.querySelector('.main__wrapper')
 
 		catalogShow($catalogLink)
 
@@ -24,13 +23,16 @@ export class PageTransition {
 				$catalog.forEach(item => item.style.display = 'none')
 				$landing.forEach(item => item.style.display = 'block')
 				$header.style.backgroundImage = 'url(./images/background.png)'
+				document.querySelectorAll('input').forEach(element => {
+					element.checked = false;
+
+				});
 			})
 		})
 
 		function catalogShow(link) {
 			link.forEach(item => {
 				item.addEventListener('click', () => {
-
 					$catalog.forEach(item => item.style.display = 'block')
 					$landing.forEach(item => item.style.display = 'none')
 					$header.style.backgroundImage = 'none'
@@ -39,11 +41,10 @@ export class PageTransition {
 					})
 					$typeCheckbox.forEach(checkBox => {
 						if ((item.getAttribute('data-type') === checkBox.name) || item.getAttribute('data-type') === 'sets') {
-							checkBox.setAttribute('checked', ' ')
+							checkBox.checked = true;
 							$submitButton.click()
 						}
 					})
-					document.documentElement.scrollTop = `${$mainWrapper.offsetTop}`
 				})
 			})
 		}

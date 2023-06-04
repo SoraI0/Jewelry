@@ -12,9 +12,25 @@ export class Filter {
 		const $filterShowButton = document.querySelector('.filter__form-button')
 		const $filter = document.querySelector('#filter')
 		const $filterTitle = document.querySelector('.filter__title')
-		
 
-
+		if (screen.width > 830) {
+			$productsWrapper.style.display = 'flex'
+			$filterTitle.style.display = 'block'
+			$filter.style.display = 'block'
+		} else {
+			$filterTitle.style.display = 'none'
+			$filter.style.display = 'none'
+		}
+		window.addEventListener('resize', () => {
+			if (screen.width > 830) {
+				$productsWrapper.style.display = 'flex'
+				$filterTitle.style.display = 'block'
+				$filter.style.display = 'block'
+			} else {
+				$filterTitle.style.display = 'none'
+				$filter.style.display = 'none'
+			}
+		})
 
 		let isClicked = true;
 		$filterShowButton.addEventListener('click', () => {
@@ -34,8 +50,6 @@ export class Filter {
 		})
 
 		$submitButton.addEventListener('click', () => {
-
-
 			if (screen.width < 829) {
 				$filterTitle.style.display = 'none'
 				$filter.style.display = 'none'
