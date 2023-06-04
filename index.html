@@ -338,7 +338,7 @@
 				<div class="main__wrapper">
 					<div class="main__filter filter">
 						<div class="filter__form-button">
-							<h2 class="filter__title text-white">Фільтр</h2>
+							<h2 class="filter__button-text text-white">Фільтр</h2>
 							<img src="./images/menu.svg.png" alt="menu">
 						</div>
 						<form id="filter" class="filter__form" action="">
@@ -346,7 +346,6 @@
 
 							<div id="type" class="filter__group">
 								<h3 class="filter__group-title text-white">Тип вибору</h3>
-
 								<div class="filter__group-list">
 									<div class="filter__group-list-item">
 										<input name="circlets" id="circlets" type="checkbox"
@@ -355,7 +354,7 @@
 									</div>
 									<div class="filter__group-list-item">
 										<input name="bracelets" id="bracelets" type="checkbox"
-											class="filter__group-item text-white css-checkbox" checked="">
+											class="filter__group-item text-white css-checkbox">
 										<label for="bracelets"><span>Браслети</span></label>
 									</div>
 									<div class="filter__group-list-item">
@@ -371,11 +370,8 @@
 								</div>
 							</div>
 
-
-
 							<div id="material" class="filter__group">
 								<h3 class="filter__group-title text-white">Метал</h3>
-
 								<div class="filter__group-list">
 									<div class="filter__group-list-item">
 										<input name="gold" id="gold" type="checkbox"
@@ -384,7 +380,7 @@
 									</div>
 									<div class="filter__group-list-item">
 										<input name="silver" id="silver" type="checkbox"
-											class="filter__group-item text-white css-checkbox" checked="">
+											class="filter__group-item text-white css-checkbox">
 										<label for="silver"><span>Срібло</span></label>
 									</div>
 								</div>
@@ -400,26 +396,30 @@
 									</div>
 									<div class="filter__group-list-item">
 										<input name="test-585" id="test-585" type="checkbox"
-											class="filter__group-item text-white css-checkbox" checked="">
+											class="filter__group-item text-white css-checkbox">
 										<label for="test-585"><span>585</span></label>
 									</div>
 								</div>
-
 							</div>
 
 							<div id="price" class="filter__group">
 								<h3 class="filter__group-title text-white">Ціна</h3>
-								<div class="filter__value text-white">Від <input id="price-from" type="number"></div>
-								<div class="filter__value text-white">До <input id="price-to" type="number"></div>
+								<div class="filter__value text-white">Від <input id="price-from" type="number"
+										name="price-from"></div>
+								<div class="filter__value text-white">До <input id="price-to" type="number" name="price-to">
+								</div>
 							</div>
-
-							<div class="filter__button"><a href="#" class="button-blue">Застосувати</a></div>
+							<input type="submit" class="filter__button button-blue" value="Застосувати">
 
 						</form>
 					</div>
 
+					<div class="hide main__not-a-found text-white">
+						<p>Нічого не знайдено</p>
+					</div>
 					<div class="main__products products">
 						<div class="main__products-inner">
+              
 							<div data-type="earrings" data-material="silver" data-test="925" data-price="10320" data-id = "1"
 								class="main__products-product product">
 								<div class="product__img">
