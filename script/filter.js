@@ -12,6 +12,8 @@ export class Filter {
 		const $filterShowButton = document.querySelector('.filter__form-button')
 		const $filter = document.querySelector('#filter')
 		const $filterTitle = document.querySelector('.filter__title')
+		const $mainWrapper = document.querySelector('.main__wrapper')
+
 
 
 		let isClicked = true;
@@ -32,6 +34,7 @@ export class Filter {
 		})
 
 		$submitButton.addEventListener('click', () => {
+			document.documentElement.scrollTop = `${$mainWrapper.offsetTop}`
 			if (screen.width < 829) {
 				$filterTitle.style.display = 'none'
 				$filter.style.display = 'none'
@@ -39,10 +42,6 @@ export class Filter {
 				$productsWrapper.style.display = 'flex'
 			}
 		})
-
-
-
-
 
 		$submitButton.addEventListener('click', (event) => {
 			event.preventDefault()
@@ -106,7 +105,5 @@ export class Filter {
 			}
 			return arr
 		}
-
-
 	}
 }
