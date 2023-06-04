@@ -1,9 +1,29 @@
 export class Favorites {
 	constructor() {
 		let $hearts = document.querySelectorAll('.heart')
-      
+      let $arrProducts = document.querySelectorAll('.product') 
+      $arrProducts.forEach(el => {
+         let arr = JSON.parse(localStorage.getItem('favorites') || '[]')
+         arr.forEach(e => {
+            if (el.getAttribute('data-id') === e.id) {
+               if ($hearts[e.id-1].classList.contains('isSaved')) {
+                  $hearts[e.id-1].src = './images/favorite-full.svg'
+               } else {
+                  $hearts[e.id-1].src = './images/favorite.svg'
+               }
+            }
+         })
+      })
+
 		$hearts.forEach(element => {
-			element.addEventListener('click', () => {
+         
+         
+         
+         isClick (element, 0)
+		})
+
+      function isClick (element, type) {
+         element.addEventListener('click', () => {
 				element.classList.toggle('favorites-click')
 				element.classList.toggle('isSaved')
             if (element.classList.contains('isSaved')) {
@@ -11,24 +31,43 @@ export class Favorites {
 				} else {
 					element.src = './images/favorite.svg'
 				}
-            let prod = element.parentElement.parentElement.parentElement
-            let src = prod.querySelector('.product-image').src
-            let name = prod.querySelector('.product__name').innerHTML
-            let price = prod.querySelector('.product__price').innerHTML
-            let id = prod.getAttribute('data-id')
+            if (type === 0) {
+               let prod = element.parentElement.parentElement.parentElement
+               let src = prod.querySelector('.product-image').src
+               let name = prod.querySelector('.product__name').innerHTML
+               let price = prod.querySelector('.product__price').innerHTML
+               let id = prod.getAttribute('data-id')
 
-            let arr = JSON.parse(localStorage.getItem('favorites') || '[]')
-            let currentProduct = {"id" : id, "src" : src, "name" : name, "price" : price}
+               let arr = JSON.parse(localStorage.getItem('favorites') || '[]')
+               let currentProduct = {"id" : id, "src" : src, "name" : name, "price" : price}
 
-            if (arr.find(i => i.id === currentProduct.id)) {
-               arr = arr.filter(i => i.id !== currentProduct.id)
-            } else {
-               arr.push(currentProduct)
+               if (arr.find(i => i.id === currentProduct.id)) {
+                  arr = arr.filter(i => i.id !== currentProduct.id)
+               } else {
+                  arr.push(currentProduct)
+               }
+               localStorage.setItem('favorites', JSON.stringify(arr))
+            } else if (type === 1) {
+               let prod = element.parentElement.parentElement.parentElement.parentElement
+               let src = prod.querySelector('img').src
+               let name = prod.querySelector('.favorites-list__product-title').innerHTML
+               let price = prod.querySelector('.favorites-list__price').innerHTML
+               let id = prod.getAttribute('data-id')
+
+               let arr = JSON.parse(localStorage.getItem('favorites') || '[]')
+               let currentProduct = {"id" : id, "src" : src, "name" : name, "price" : price}
+
+               if (arr.find(i => i.id === currentProduct.id)) {
+                  arr = arr.filter(i => i.id !== currentProduct.id)
+               } else {
+                  arr.push(currentProduct)
+               }
+               localStorage.setItem('favorites', JSON.stringify(arr))
             }
-            localStorage.setItem('favorites', JSON.stringify(arr))
-			})
-         
-		})
+            
+            })
+      }
+
 		let $icon = document.querySelector('.header__icons-saved')
 		let $listForm = document.querySelector('.favorites-list')
 		let $landing = document.querySelector('.landing')
@@ -94,25 +133,10 @@ export class Favorites {
          newListProductBottom.appendChild(newA)
          newListProductBottom.appendChild(newListFav)
          newListFav.appendChild(newImgHeart)
-         console.log(newListProduct)
-         return newListProduct
-         // `
-         //    <div class="favorites-list__product" data-id = ${id}>
-         //       <img src="${src}" alt="product">
-         //       <div class="favorites-list__product-info">
-         //          <h3 class="favorites-list__product-title">${name}</h3>
-         //          <p class="favorites-list__price">${price}</p>
-         //          <div class="favorites-list__product-bottom">
-         //             <a href="#" class="button-white">Замовити</a>
-         //             <div class="favorites-list__fav">
-         //                <img class="favorites-list__icon-black heart isSaved" src="./images/favorite-full.svg"
-         //                   alt="favorite">
-         //             </div>
-         //          </div>
-         //       </div>
-         //    </div>
-         // `
          
+         isClick(newImgHeart, 1)
+
+         return newListProduct
       }
 	}
 }
