@@ -697,11 +697,16 @@ ul {
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	gap: 30px;
 }
 .favorites-list__product {
+	padding: 10px 10px;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	gap: 20px;
+	border: 1px solid var(--color-blue);
+	border-radius: 20px;
 }
 	.favorites-list__product-info {
 		width: 60%;
@@ -732,6 +737,32 @@ ul {
 			background-image: url(./images/favorite.svg);
 			background-repeat: no-repeat;
 			filter: invert();
+		}
+
+		.favorites-list__img-cover {
+			max-width: 300px;
+		}
+		.favorites-list__img-cover img {
+			width: 100%;
+		}
+		.favorites-list__product-button {
+			background-color: transparent;
+			padding: 15px 50px;
+			font-size: 32px;
+			line-height: 120%;
+			transition: 0.3s;
+			border: 1px solid #000000;
+		}
+
+		.favorites-list__product-button:hover {
+			background-color: #000000;
+			border: 1px solid black;
+			color: white;
+			cursor: pointer;
+		}
+
+		.favorites-list__title {
+			font-size: 32px;
 		}
 
 /*------------------------------------IS-SAVED----------------------------------------*/
@@ -960,6 +991,9 @@ header {
 	}
 
 @media (max-width: 1150px) {
+	.favorites-list__product-title {
+		font-size: 30px;
+	}
 	.header__info-text{
 		position: relative;
 		bottom: 70px;
@@ -979,6 +1013,16 @@ header {
 	.gallery__text {
 		font-size: 40px;
 	}
+	.favorites-list__product-button {
+		padding: 15px 30px;
+		font-size: 24px;
+	}
+}
+@media (max-width: 1150px) {
+	.favorites-list__product-button {
+		padding: 15px 25px;
+		font-size: 24px;
+	}
 }
 @media (max-width: 950px) {
 	.header__info-text{
@@ -990,9 +1034,13 @@ header {
 	h1 {
 		font-size: 80px;
 	}
-	.about__info-button {
+	.button-white {
 		padding: 15px 40px;
 		font-size: 24px;
+	}
+	.favorites-list__product-button {
+		padding: 10px 13px;
+		font-size: 20px;
 	}
 }
 @media (max-width: 850px) {
@@ -1000,6 +1048,14 @@ header {
 		margin-top: 80px;
 		display: flex;
 		flex-direction: row-reverse;
+	}
+	.favorites-list__product {
+		flex-direction: column;
+		align-items: center;
+		gap: 0px;
+	}
+	.favorites-list__product-info {
+		width: 90%;
 	}
 }
 @media (max-width: 1150px) {
@@ -1033,7 +1089,7 @@ header {
 	h1 {
 		font-size: 80px;
 	}
-	.about__info-button {
+	.button-white {
 		padding: 15px 40px;
 		font-size: 24px;
 	}
@@ -1097,6 +1153,9 @@ header {
 	.about__info p{
 		margin: 55px 0px 32px 0px;
 	}
+	.favorites-list__product-title {
+		font-size: 25px;
+	}
 }
 @media (max-width: 650px) {
 	.header__info-bottom {
@@ -1168,6 +1227,10 @@ header {
 	.header__info {
 		margin-top: 20px;
 	}
+	.favorites-list{
+		width: 90%;
+		padding: 20px 50px;
+	}
 }
 @media (max-width: 600px) {
 	.header__info-bottom {
@@ -1192,6 +1255,12 @@ header {
 		height: 450px;
 		background-size: cover;
 	}
+	.favorites-list__product-info {
+		width: 100%;
+	}
+	.favorites-list__img {
+		width: 100%;
+	}
 }
 
 @media (max-width: 500px) {
@@ -1204,7 +1273,7 @@ header {
 	.about__info p{
 		margin: 25px 0px 25px 0px;
 	}
-	.about__info-button {
+	.button-white {
 		padding: 10px 15px;
 		font-size: 22px;
 	}
@@ -1248,7 +1317,7 @@ header {
 	.about__info p{
 		margin: 25px 0px 25px 0px;
 	}
-	.about__info-button {
+	.button-white {
 		padding: 10px 15px;
 		font-size: 22px;
 	}
@@ -1263,6 +1332,11 @@ header {
 	}
 	.gallery__block .gallery__overlay {
 		opacity: 1;
+	}
+}
+@media (max-width: 400px) {
+	.favorites-list__product-title {
+		font-size: 18px;
 	}
 }
 
