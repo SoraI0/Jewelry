@@ -45,7 +45,6 @@ export class Filter {
 				$filter.style.marginTop = '0px'
 				$productsWrapper.style.display = 'flex'
 			}
-
 			isClicked = !isClicked
 		})
 

@@ -1,21 +1,10 @@
 export class Favorites {
 	constructor() {
-		// let favList = document.querySelector('.favorites-list__list')
+		let favList = document.querySelector('.favorites-list__list')
 		let $hearts = document.querySelectorAll('.heart')
 		let $arrProducts = document.querySelectorAll('.product')
-		// let text = document.createElement('p')
-		// text.innerText = 'Немає обраних товарів'
-		// text.style.width = '100%'
-		// text.style.display = 'flex'
-		// text.style.justifyContent = 'center'
-		// text.style.margin = '30px 0'
-		// favList.after(text)
-		// if (!(localStorage.getItem('favorites') === [])) {
-		// 	favList.after(text)
-		// 	console.log('awawf');
-		// } else {
-		// 	text.textContent = ''
-		// }
+
+
 
 		checkHearts()
 		$hearts.forEach(element => {
@@ -23,7 +12,9 @@ export class Favorites {
 		})
 
 		function isClick(element, type) {
+
 			element.addEventListener('click', () => {
+
 				element.classList.toggle('favorites-click')
 				element.classList.toggle('isSaved')
 				if (element.classList.contains('isSaved')) {
@@ -81,10 +72,12 @@ export class Favorites {
 					localStorage.setItem('favorites', JSON.stringify(arr))
 				}
 			})
+
 		}
 
 		let $icon = document.querySelector('.header__icons-saved')
 		let $listForm = document.querySelector('.favorites-list')
+
 		let $landing = document.querySelector('.landing')
 		let $header = document.querySelector('header')
 		let $footer = document.querySelector('footer')
@@ -93,6 +86,22 @@ export class Favorites {
 		let $exit = document.querySelector('.favorites-list__cross')
 		toggleClick($icon)
 		toggleClick($exit)
+
+
+		let text = document.createElement('p')
+		text.style.width = '100%'
+		text.style.display = 'flex'
+		text.style.justifyContent = 'center'
+		text.style.margin = '30px 0'
+		favList.after(text)
+		$icon.addEventListener('click', () => {
+			if (localStorage.getItem('favorites') === '[]') {
+				text.innerText = 'Немає обраних товарів'
+				console.log('awawf');
+			} else {
+				text.innerText = ''
+			}
+		})
 
 		function toggleClick(em) {
 			em.addEventListener('click', () => {
