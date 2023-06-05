@@ -2,24 +2,10 @@ export class Favorites {
 	constructor() {
 		let $hearts = document.querySelectorAll('.heart')
       let $arrProducts = document.querySelectorAll('.product') 
-      $arrProducts.forEach(el => {
-         let arr = JSON.parse(localStorage.getItem('favorites') || '[]')
-         arr.forEach(e => {
-            if (el.getAttribute('data-id') === e.id) {
-               if ($hearts[e.id-1].classList.contains('isSaved')) {
-                  $hearts[e.id-1].src = './images/favorite-full.svg'
-               } else {
-                  $hearts[e.id-1].src = './images/favorite.svg'
-               }
-            }
-         })
-      })
-
+      
+      checkHearts ()
 		$hearts.forEach(element => {
-         
-         
-         
-         isClick (element, 0)
+         element.parentElement.classList.contains('slider__fav') ? isClick (element, 2) : isClick (element, 0)
 		})
 
       function isClick (element, type) {
@@ -56,6 +42,22 @@ export class Favorites {
 
                let arr = JSON.parse(localStorage.getItem('favorites') || '[]')
                let currentProduct = {"id" : id, "src" : src, "name" : name, "price" : price}
+               delHearts(element)
+               if (arr.find(i => i.id === currentProduct.id)) {
+                  arr = arr.filter(i => i.id !== currentProduct.id)
+               } else {
+                  arr.push(currentProduct)
+               }
+               localStorage.setItem('favorites', JSON.stringify(arr))
+            } else if (type === 2) {
+               let prod = element.parentElement.parentElement.parentElement
+               let src = prod.querySelector('.slider__img').src
+               let name = prod.querySelector('.slider__product-title').innerHTML
+               let price = prod.querySelector('.slider__price').innerHTML
+               let id = prod.getAttribute('data-id')
+
+               let arr = JSON.parse(localStorage.getItem('favorites') || '[]')
+               let currentProduct = {"id" : id, "src" : src, "name" : name, "price" : price}
 
                if (arr.find(i => i.id === currentProduct.id)) {
                   arr = arr.filter(i => i.id !== currentProduct.id)
@@ -64,7 +66,6 @@ export class Favorites {
                }
                localStorage.setItem('favorites', JSON.stringify(arr))
             }
-            
             })
       }
 
@@ -137,6 +138,30 @@ export class Favorites {
          isClick(newImgHeart, 1)
 
          return newListProduct
+      }
+
+      function checkHearts () {
+         $arrProducts.forEach(el => {
+            let arr = JSON.parse(localStorage.getItem('favorites') || '[]')
+   
+            arr.forEach(e => {
+               if (el.getAttribute('data-id') === e.id) {
+                  $arrProducts[e.id - 1].querySelector('.heart').src = './images/favorite-full.svg'
+                  $arrProducts[e.id - 1].querySelector('.heart').classList.add('isSaved')
+               }
+            })
+         })
+      }
+
+      function delHearts (i) {
+         let arr = JSON.parse(localStorage.getItem('favorites') || '[]')
+
+         arr.forEach(e => {
+            if (e.id === i.parentElement.parentElement.parentElement.parentElement.getAttribute('data-id')) {
+               $arrProducts[e.id - 1].querySelector('.heart').src = './images/favorite.svg'
+               $arrProducts[e.id - 1].querySelector('.heart').classList.remove('isSaved')
+            }
+         })
       }
 	}
 }

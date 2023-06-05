@@ -242,7 +242,7 @@ ul {
 		}
 
 
-			.product {
+			.main__products-product {
 				transition: 0.2s;
 				width: 28.5%;
 				min-width: 200px;
@@ -519,7 +519,7 @@ ul {
 }
 
 @media (max-width: 995px) {
-	.product {
+	.main__products-product {
 		width: 48%;
 	}
 	.filter__title {
@@ -595,7 +595,7 @@ ul {
 		margin-left: 0;
 	}
 
-	.product {
+	.main__products-product {
 		min-width: 170px;
 		width: 31%;
 	}
@@ -610,7 +610,7 @@ ul {
 }
 
 @media (max-width: 660px) {
-	.product {
+	.main__products-product {
 		min-width: 170px;
 		width: 47%;
 	}
@@ -624,7 +624,7 @@ ul {
 }
 
 @media (max-width: 480px) {
-	.product {
+	.main__products-product {
 		width: 100%;
 	}
 
