@@ -7,6 +7,10 @@ export class PageTransition {
 		const $header = document.querySelector('header')
 		const $typeCheckbox = document.querySelectorAll('#type input')
 		const $submitButton = document.querySelector('.filter__button')
+		const $products = document.querySelectorAll('.main__products-product')
+		const $priceValue = document.querySelectorAll('#price-from, #price-to')
+		const $notAFound = document.querySelector('.main__not-a-found')
+
 
 		catalogShow($catalogLink)
 
@@ -25,7 +29,11 @@ export class PageTransition {
 				$header.style.backgroundImage = 'url(./images/background.png)'
 				document.querySelectorAll('input').forEach(element => {
 					element.checked = false;
-
+					$priceValue.forEach(el => {
+						el.value = ''
+					})
+					$notAFound.classList.add('hide')
+					$products.forEach(item => item.style.display = 'flex')
 				});
 			})
 		})

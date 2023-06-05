@@ -1,7 +1,21 @@
 export class Favorites {
 	constructor() {
+		// let favList = document.querySelector('.favorites-list__list')
 		let $hearts = document.querySelectorAll('.heart')
 		let $arrProducts = document.querySelectorAll('.product')
+		// let text = document.createElement('p')
+		// text.innerText = 'Немає обраних товарів'
+		// text.style.width = '100%'
+		// text.style.display = 'flex'
+		// text.style.justifyContent = 'center'
+		// text.style.margin = '30px 0'
+		// favList.after(text)
+		// if (!(localStorage.getItem('favorites') === [])) {
+		// 	favList.after(text)
+		// 	console.log('awawf');
+		// } else {
+		// 	text.textContent = ''
+		// }
 
 		checkHearts()
 		$hearts.forEach(element => {

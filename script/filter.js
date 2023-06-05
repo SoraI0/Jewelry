@@ -13,24 +13,24 @@ export class Filter {
 		const $filter = document.querySelector('#filter')
 		const $filterTitle = document.querySelector('.filter__title')
 
-		if (screen.width > 830) {
-			$productsWrapper.style.display = 'flex'
-			$filterTitle.style.display = 'block'
-			$filter.style.display = 'block'
-		} else {
-			$filterTitle.style.display = 'none'
-			$filter.style.display = 'none'
-		}
-		window.addEventListener('resize', () => {
-			if (screen.width > 830) {
-				$productsWrapper.style.display = 'flex'
-				$filterTitle.style.display = 'block'
-				$filter.style.display = 'block'
-			} else {
-				$filterTitle.style.display = 'none'
-				$filter.style.display = 'none'
-			}
-		})
+		// if (screen.width > 830) {
+		// 	$productsWrapper.style.display = 'flex'
+		// 	$filterTitle.style.display = 'block'
+		// 	$filter.style.display = 'block'
+		// } else {
+		// 	$filterTitle.style.display = 'none'
+		// 	$filter.style.display = 'none'
+		// }
+		// window.addEventListener('resize', () => {
+		// 	if (screen.width > 830) {
+		// 		$productsWrapper.style.display = 'flex'
+		// 		$filterTitle.style.display = 'block'
+		// 		$filter.style.display = 'block'
+		// 	} else {
+		// 		$filterTitle.style.display = 'none'
+		// 		$filter.style.display = 'none'
+		// 	}
+		// })
 
 		let isClicked = true;
 		$filterShowButton.addEventListener('click', () => {
