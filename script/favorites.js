@@ -163,5 +163,22 @@ export class Favorites {
             }
          })
       }
+    const allElements = document.querySelectorAll('.scroll-to-top, header, #landing, #catalog, footer')
+
+		$icon.addEventListener('click', () => {
+			allElements.forEach(el => {
+				el.style.pointerEvents = 'none'
+
+				el.style.userSelect = 'none'
+				document.body.style.overflow = 'hidden'
+			})
+		})
+		$exit.addEventListener('click', () => {
+			allElements.forEach(el => {
+				el.style.pointerEvents = 'all'
+				el.style.userSelect = 'all'
+				document.body.style.overflow = 'auto'
+			})
+		})
 	}
 }
