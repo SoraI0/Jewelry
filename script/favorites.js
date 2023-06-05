@@ -173,7 +173,7 @@ export class Favorites {
 		})
 		$exit.addEventListener('click', () => {
 			allElements.forEach(el => {
-				el.style.pointerEvents = 'all'
+				el.style.pointerEvents = 'unset'
 				document.body.style.overflow = 'auto'
 			})
 		})
